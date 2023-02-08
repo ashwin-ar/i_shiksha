@@ -28,5 +28,7 @@ The games are 1.Memory ,2.Math,3.Balancing,4.Quiz,5.Maze.
 * MCQ - Question & Options will be displayed in OLED.
 * We need to tilt joystick accroding to the option. *(Joystick module is used to navigate. OLED is used to display the questions)*
 
+Video Link - [Click here](https://drive.google.com/file/d/1ot_mprnrnEyjq4emYqcZ3uUef3m5UlzO/view?usp=share_link "Google drive link").
+---
 Presentation link - [Click here](https://drive.google.com/file/d/1tEjUVXm7UxA7zFW1Hg25lVoEThYMXSaE/view?usp=share_link "Google drive link").
 ---
