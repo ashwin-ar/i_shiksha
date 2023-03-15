@@ -1,8 +1,6 @@
 # i_shiksha
 A toy for kids under the age of 7 years.
 
-This was done as a part of Toycathon-21 Finals. 
-
 A 128x64 OLED is controlled with an ESP32,Joystick,Gyroscope & misc like LED's & Buttons. This has 5 different games.
 ___
 The games are 1.Memory ,2.Math,3.Balancing,4.Quiz,5.Maze.
