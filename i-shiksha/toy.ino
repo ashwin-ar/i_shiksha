@@ -139,25 +139,25 @@ void show_sequence()
 
   for (int i = 0; i < level; i++)
   {
-    if (sequence[i] == 2) {
+    if (sequence[i] == 2) { //blink first LED
       digitalWrite(a, HIGH);
       delay(velocity);
       digitalWrite(a, LOW);
       delay(200);
     }
-    if (sequence[i] == 3) {
+    if (sequence[i] == 3) { //blink second LED
       digitalWrite(b, HIGH);
       delay(velocity);
       digitalWrite(b, LOW);
       delay(200);
     }
-    if (sequence[i] == 4) {
+    if (sequence[i] == 4) { //blink Third LED
       digitalWrite(c, HIGH);
       delay(velocity);
       digitalWrite(c, LOW);
       delay(200);
     }
-    if (sequence[i] == 5) {
+    if (sequence[i] == 5) { //blink fourth LED
       digitalWrite(d, HIGH);
       delay(velocity);
       digitalWrite(d, LOW);
@@ -191,7 +191,7 @@ void get_sequence()
         your_sequence[i] = 5;
         flag = 1;
         delay(700);
-        if (your_sequence[i] != sequence[i])
+        if (your_sequence[i] != sequence[i]) //comparing your ith entered value with generated ith value
         {
           wrong_sequence();
           return;
@@ -328,35 +328,35 @@ void exe2() {
 Move towards right to calculate sum. */
 
   GetMpuValue2(MPU2); //gets gyro position.
-
-  if ((AcY2 > 4000) && (s > 0))
+//sensing input. 
+  if ((AcY2 > 4000) && (s > 0)) //To increment A
   {
     v = 0;
     s = 0;
     a2 = 0;
     b2 = 0;
   }
-  if ((AcX2 > 4500))
+  if ((AcX2 > 4500)) //To increment B
   {
     v = 1;
   }
-  if ((AcY2 < -17500))
+  if ((AcY2 < -17500)) // To add A & B
   {
     v = 2;
   }
   //    if ((AcX2 < -17000))
   //    {a=0;b=0;}
-  else if (v == 0) {
+  else if (v == 0) { //adding A
 
     Serial.print("Enter Value A:");
     Serial.print(a2);
 
-    if ((AcY2 >= 4000) && ( p == 0)) {
+    if ((AcY2 >= 4000) && ( p == 0)) { //p is flag
       a2 = a2 + 1; //increments Variable A
       p = 1;
     }
-    else if ((AcY2 >= -14000) && (AcY2 <= -1000))
-      p = 0;
+    else if ((AcY2 >= -14000) && (AcY2 <= -1000)) //for the next operation if it is at center, p is reset and you can update a
+      p = 0; //resets p
   }
   if (v == 1) {
     Serial.print("Enter Value B:");
